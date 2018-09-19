@@ -21,8 +21,11 @@ Each of the remaining lines is a phone number. Each phone number consists of a n
 composition
 Output: Produces a line of output for each duplicate number, the output is the standard format of the number followed by a space and then
 Is the number of repetitions. If there are multiple duplicate numbers, they are output in ascending order of the number. If there are no duplicate numbers,  
+  
 Output one line:  
+  
 No duplicates.  
+  
 Input sample  
 12  
 4873279  
@@ -37,11 +40,12 @@ F101010
 888-1200  
 -4-8-7-3-2-7-9-  
 487-3279  
+  
 Output sample  
 310-1010 2  
 487-3279 4  
 888-4567 3  
-  
+    
 problem analysis  
 For ease of memory, phone numbers are translated into words, phrases, and grouped. The same phone number, there are multiple ways of representation. To determine if there is a duplicate number in the entered phone number, there are two issues to be resolved. (1) Convert various phone number representations into standard representations: a string of length 8 with the first three characters being numbers, the fourth character being '-', and the last four characters being numbers. (2) Search for duplicate phone numbers based on the standard representation of the phone number. The solution is to sort all the phone numbers so that the same phone number is placed in an adjacent location. In addition, the title also requires that when a duplicate phone number is output, the output is sorted in ascending order of the number.  
   
